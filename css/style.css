@@ -80,8 +80,11 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
   }
 
+  /*curving radius, adding min size*/
   .card {
     margin: 12px;
     display: flex;
@@ -92,7 +95,6 @@ body{
     border-top-right-radius: 50px;
     flex-direction: column;
     flex-basis: 450px;
- 
   
   }
 
@@ -131,6 +133,7 @@ body{
     text-align: center;
   }
 
+/*animation code block*/
   @keyframes logo{
     from {
         width: 25px;
@@ -142,11 +145,13 @@ body{
     }
   }
 
+  /*running animation, setting width*/
   #logo{
     animation: logo 5s;
     width: 475px;
   }
 
+/*selecting header children of .card, changing styling*/
 .card > header{
     background: #288088;
     border: solid 2px #45ADAD;
@@ -167,11 +172,15 @@ body{
     width: 300px;
 }
 
-@media print{
+/*media query for print screen*/
+@media print and (orientation:portrait){
+  /*text*/
     body{
         font-family: Arial, Helvetica;
         background-image: none;
     }
+
+    /*making nav span full site width*/
     nav{
         width:100%;
     }
@@ -185,11 +194,13 @@ body{
         border: solid 2px #45ADDD
     }
 
+    /*adding in emoji*/
     .card ul li:nth-child(2)::after {
         content: "👍 ";
     }
-    
+    /*lining up pricing*/
     .pricing{
+        display: flex;
         justify-content: space-between;
         flex-flow: wrap;
         align-items: flex-end;
@@ -203,8 +214,9 @@ body{
 
 }
 
-
+/*media query for larger views*/
 @media screen and (min-width: 900px) {
+    /*header spacing*/
     header{
         flex-direction: row;
         justify-content: space-between;
@@ -223,6 +235,7 @@ body{
         z-index: 1000; 
     }
 
+    /*pricing spacing for larger screen*/
     .pricing{
         justify-content: space-between;
         flex-flow: wrap;
@@ -233,7 +246,7 @@ body{
 
 }
 
-
+/*media query for reduced motion*/
     @media (prefers-reduced-motion: reduce) {
         #logo {
           animation: none;
