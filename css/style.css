@@ -4,7 +4,7 @@ body{
     font-size: 16pt; /* test for this! Make all sizes em or rem */
     font-family: "Poppins", sans-serif;
     background-color: #f1f1f1;
-    background-image: url(“images/concrete_seamless.png”);
+    background-image: url('../images/concrete_seamless.png');
   }
   
   header{
@@ -194,6 +194,7 @@ body{
         flex-flow: wrap;
         align-items: flex-end;
         flex-wrap: nowrap;
+        
     }
     .gallery, #gallery{
         display: none;
